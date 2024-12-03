@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoelenboek Jevanni Bakkes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Algemene opmaak voor de pagina */
+        body {
+            background-image: url('https://example.com/roermond.jpg'); /* Vervang door de URL van je Roermond-afbeelding */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Voeg een semi-transparante achtergrond toe aan de secties voor leesbaarheid */
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 120px 20px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparant wit */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigatiebalk en header styling */
+        header {
+            background-color: rgba(44, 62, 80, 0.9); /* Semi-transparante header */
+            color: white;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .language-switch {
+            display: flex;
+            gap: 10px;
+            margin-right: 50px;
+        }
+
+        .language-switch a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s, color 0.3s;
+        }
+
+        .language-switch a:hover {
+            border-bottom: 2px solid #3498db;
+            color: #3498db;
+        }
+
+        /* Knop styling */
+        .hub-button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .hub-button:hover {
+            background-color: #2980b9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: rgba(44, 62, 80, 0.9);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Profiel afbeelding */
+        img.profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            float: right;
+            object-fit: cover;
+        }
+
+        /* Media query voor mobiel */
+        @media (max-width: 768px) {
+            .content {
+                padding: 120px 10px 60px;
+            }
+
+            .language-switch {
+                margin-top: 10px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Smoelenboek / Profile Book</h1>
+        </div>
+        <div class="language-switch">
+            <a href="#" onclick="switchLanguage('nl'); return false;">Nederlands</a>
+            <a href="#" onclick="switchLanguage('en'); return false;">English</a>
+            <a href="file:///C:/School%20map/SmoelenBoek/Smoelenboek/smoelenboek%20geheel/hub.html" class="hub-button">Hub</a> <!-- Hub knop toegevoegd -->
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- Profiel informatie Nederlands -->
+        <section class="profile" data-nl>
+            <img src="foto/thumbnail_jo.png" alt="Jevanni Bakkes" class="profile-picture">
+            <h2>Jevanni Bakkes</h2>
+            <p><strong>Leeftijd:</strong> 16 jaar</p>
+            <p><strong>Opleiding:</strong> IT System and Devices</p>
+            <p><strong>E-mail:</strong> <a href="mailto:jevanni.bakkes@student.gildeopleidingen.nl">jevanni.bakkes@student.gildeopleidingen.nl</a></p>
+        </section>
+
+        <!-- Profiel informatie Engels -->
+        <section class="profile" data-en style="display:none;">
+            <img src="foto/thumbnail_jo.png" alt="Jevanni Bakkes" class="profile-picture">
+            <h2>Jevanni Bakkes</h2>
+            <p><strong>Age:</strong> 16 years</p>
+            <p><strong>Study:</strong> IT System and Devices</p>
+            <p><strong>Email:</strong> <a href="mailto:jevanni.bakkes@student.gildeopleidingen.nl">jevanni.bakkes@student.gildeopleidingen.nl</a></p>
+        </section>
+
+        <!-- Over Jevanni Nederlands -->
+        <section class="about" data-nl>
+            <h2>Over Jevanni</h2>
+            <p>Jevanni is een 16-jarige student die zich momenteel verdiept in IT System and Devices. Hij heeft een passie voor technologie en coderen, en zoekt altijd nieuwe uitdagingen.</p>
+        </section>
+
+        <!-- About Jevanni Engels -->
+        <section class="about" data-en style="display:none;">
+            <h2>About Jevanni</h2>
+            <p>Jevanni is a 16-year-old student currently studying IT System and Devices. He is passionate about technology and coding, always seeking new challenges.</p>
+        </section>
+
+        <!-- Sporten en Fitness Nederlands -->
+        <section class="sports" data-nl>
+            <h2>Sporten en Fitness</h2>
+            <ul>
+                <li>Hardlopen</li>
+                <li>Fietsen</li>
+                <li>Krachttraining</li>
+                <li>Voetbal</li>
+            </ul>
+        </section>
+
+        <!-- Sports and Fitness Engels -->
+        <section class="sports" data-en style="display:none;">
+            <h2>Sports and Fitness</h2>
+            <ul>
+                <li>Running</li>
+                <li>Cycling</li>
+                <li>Strength Training</li>
+                <li>Football</li>
+            </ul>
+        </section>
+
+        <!-- Doelen Nederlands -->
+        <section class="goals" data-nl>
+            <h2>Doelen</h2>
+            <ul>
+                <li>Afstuderen en een carrière in de IT opbouwen</li>
+                <li>Ontwikkelen van innovatieve IT-oplossingen</li>
+                <li>Verbeteren van programmeervaardigheden en systeembeheer</li>
+            </ul>
+        </section>
+
+        <!-- Goals Engels -->
+        <section class="goals" data-en style="display:none;">
+            <h2>Goals</h2>
+            <ul>
+                <li>Graduate and build a career in IT</li>
+                <li>Develop innovative IT solutions</li>
+                <li>Improve coding and system administration skills</li>
+            </ul>
+        </section>
+
+        <!-- Inspiratie Nederlands -->
+        <section class="inspiration" data-nl>
+            <h2>Inspiratie</h2>
+            <p>Jevanni wordt geïnspireerd door technologie die de wereld verandert en IT-professionals die innovatieve oplossingen creëren. Hij wil hier ook aan bijdragen.</p>
+        </section>
+
+        <!-- Inspiration Engels -->
+        <section class="inspiration" data-en style="display:none;">
+            <h2>Inspiration</h2>
+            <p>Jevanni is inspired by technology that changes the world and IT professionals who create innovative solutions. He is motivated to contribute as well.</p>
+        </section>
+
+        <!-- Extra informatie over opleiding en locatie -->
+        <section class="extra-info">
+            <h2>Opleiding en Locatie</h2>
+            <p><strong>Opleiding:</strong> IT System and Devices</p>
+            <p><strong>Instelling:</strong> Gilde Opleidingen</p>
+            <p><strong>Lokaal:</strong> RB-109</p>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script>
+        function switchLanguage(lang) {
+            const nlSections = document.querySelectorAll('[data-nl]');
+            const enSections = document.querySelectorAll('[data-en]');
+            if (lang === 'nl') {
+                nlSections.forEach(section => section.style.display = 'block');
+                enSections.forEach(section => section.style.display = 'none');
+            } else {
+                nlSections.forEach(section => section.style.display = 'none');
+                enSections.forEach(section => section.style.display = 'block');
+            }
+        }
+    </script>
+
+</body>
+</html>

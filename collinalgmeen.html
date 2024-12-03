@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<title> Algemeen </title>
+    
+<style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color:powderblue;
+            margin: 0;
+            padding: 0;
+            display: flex;                                /* Basis van de site  */
+            justify-content: center;
+            align-items: center;
+            height: 85vh;
+            background-image:url("foto/achtergrond\ Website.jpg");
+        }
+
+        .smoelenboek {
+            background-color:white;
+            border-radius: 5%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);    /* Midden smoelenboek */
+            width: 19%;
+            padding: 2%;
+            text-align: center;
+        }
+
+        .smoelenboek img {
+            width: 52%;
+            height: 45%;
+            border-radius: 50%;                             /* Foto smoelenboek */
+            object-fit: cover;
+            border: 10px solid #84848469;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .smoelenboek img:hover {
+            transform: scale(1.1);                        /* Vergroting van de smoelenboek foto */
+        }
+       
+       .smoelenboek h2 {
+            font-size: 24px;
+            margin: 15px 0 10px 0;                       /*  Headline 2 */
+        }
+
+        .smoelenboek p {
+            color: #555;                               /* paragraph */
+            font-size: 16px;
+        }
+
+        .Wiebenik {
+            background-color:rgb(255, 255, 255);
+            border-radius: 5%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);          /* Tekst kolom 'wie ben ik?' (links) */
+            width: 19%;
+            padding: 2%;
+            text-align: center;
+            position:absolute;
+            left:5%; 
+            top: 80%;
+    
+        }
+        
+        .Waarkanjemijvinden {
+            background-color:rgb(255, 255, 255);
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);          /* Tekst kolom 'Waar kun je mij vinden' (rechts) */
+            width: 19%;
+            padding: 2%;
+            text-align: center;
+            position:absolute;
+            right:5%; 
+            top: 80%;
+         }
+    
+        .fotogildeopleidingen {
+            background-color:rgb(255, 255, 255);
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);          /* Gilde Opleidingen foto (midden foto) */
+            width: 19%;
+            padding: 2%;
+            text-align: center;
+            position:absolute;
+            right:39,5%; 
+            top: 90%;
+         }
+    
+        .fotogildeopleidingen img {
+            width: 90%;                                         /* afmeetingen foto Gilde Opleidingen */
+            height: auto; 
+         }
+
+         ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            display: flex;                                   /* Navagatie balk */
+            justify-content: center; 
+            position: absolute;
+            top: 0; 
+            width: 100%; 
+            }
+
+
+ 
+
+          li a {
+            display: block;
+            color: white;
+            text-align: center;                              /* tekst kleur in de navagatie balk */
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+        
+        .language-switch {
+          position: absolute;
+          right: 2%;                                         /* Zet de taalopties aan de rechterkant */
+          top: 0;
+          display: flex;
+          gap: 3%;                                           /* Ruimte tussen de NL en EN knoppen */
+        }
+
+        .language-switch a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+         .language-switch a:hover {
+          background-color: #111;
+        }
+   
+
+
+        @media (max-width: 768px) {
+    body {
+        background-color: #e0e0e0;
+    }
+
+    .container {
+        width: 90%;  /* Maak de breedte van de container responsief */
+    }
+
+    header {
+        text-align: center;  /* Zorg ervoor dat de tekst gecentreerd is op kleinere schermen */
+    }
+
+    .nav {
+        display: block;  /* Maak de navigatiebalk verticaal op kleine schermen */
+    }
+}
+
+
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<div class="smoelenboek">
+        <img src="foto/foto persoon (Colin).jpg" alt="foto persoon" onclick="goBack()">
+        <h2> Colin Stepprath </h2>
+        <p> Colin.stepprath@student.gildeopleidingen.nl </p>                
+        <p> Software Developer </p>
+        <p> 16 jaar </p>
+    
+     
+    
+</div>
+
+   
+<div class="Wiebenik"> 
+         <h2> Wie ben ik? </h2>
+         <p> Ik ben Colin Stepprath,   </p>
+         <p> Ik ben 16 jaar, en ik ga de Opleiding Software Developer doen Bij Gilde Opleidingen. </p>
+         <p> De opleiding Software Developer heb ik gekozen om dat ik eigelijk altijd al interesse heb gehad in laptops 
+             en alles er omheen. </p>
+         
+</div>
+    
+<div class="Waarkanjemijvinden">
+        <h2> Waar kun je mij vinden? </h2>
+        <p> Ik zit meestal in het lokaal:  </p>
+        <p> <strong>B109</strong> </p>
+        <p> bij Gilde Opleidingen op de Bredeweg.  </p>
+
+</div>
+   
+<div class="fotogildeopleidingen"> 
+       <h2> Gilde Opleidingen </h2>
+       <img src="foto/GildeOpleidingen foto.jpg" alt="gilde Opleidingen">  
+
+</div>
+ 
+<ul>
+        <li><a class="active" href="file:///C:/School%20map/SmoelenBoek/Smoelenboek/smoelenboek%20geheel/hub.html">Hub</a></li>
+        <li><a href="file:///C:/School%20map/SmoelenBoek/Smoelenboek/smoelenboek%20geheel/collinalgmeen.html">Algemeen</a></li>
+        <li><a href="file:///C:/School%20map/SmoelenBoek/Smoelenboek/smoelenboek%20geheel/huisdier.html">Huisdier</a></li>
+        <li> <a href="file:///C:/School%20map/SmoelenBoek/Smoelenboek/smoelenboek%20geheel/games.html"> Games </a> </li>
+        <li> <a href="file:///C:/School%20map/SmoelenBoek/Smoelenboek/smoelenboek%20geheel/ColinReacties.html"> Reactie </a> </li>
+</ul>
+    
+<div class="language-switch">
+    <a href="file:///C:/School%20map/SmoelenBoek/Smoelenboek/smoelenboek%20geheel/collinalgmeen.html">NL</a>
+    <a href="file:///C:/School%20map/SmoelenBoek/Smoelenboek/smoelenboek%20geheel/ColinAlgemeenEN.html">EN</a>
+</div>
+
+</body>
+</html>

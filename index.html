@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Persoonlijke Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Dillan's homepage</a></li>
+          <li><a href="Hobbies.html">Hobbies</a></li>
+          <li><a href="Huisdieren.html">Huisdieren</a></li>
+          <li><a href="opleiding.html">Opleiding</a></li>
+          <li><a href="file:///C:/School%20map/SmoelenBoek/Smoelenboek/smoelenboek%20geheel/hub.html">Hub</a></li>
+
+        </ul>
+      </nav>
+    </header>
+
+
+     <div class="language-toggle">
+      <button onclick="setLanguage('nl')">Nederlands</button>
+      <button onclick="setLanguage('en')">English</button>
+    </div>
+  </header>
+
+  <section class="content">
+
+    <img
+      src="foto/persoon.jpg"
+      alt="Foto van persoon"
+      class="profile-pic"
+    />
+    
+    <div class="bio">
+
+      <div id="bio-nl">
+        <h2>Korte Biografie</h2>
+        <p>
+          Hoi mijn naam is Dillan, ik ben een ITSD in het bedrijf gilde devops.
+          Je kunt me vinden in klas w109.
+        </p>
+      </div>
+
+
+      <div id="bio-en" style="display: none;">
+        <h2>Short Biography</h2>
+        <p>
+          Hi, my name is Dillan. I am an ITSD in the company Gilde DevOps.
+          You can find me in class W109.
+        </p>
+      </div>
+    </div>
+  </section>
+
+    <footer>
+      <p>
+        <a
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          target="_blank"
+          style="color: white; text-decoration: none"
+          >&copy; 2024 Persoonlijke Website</a
+        >
+      </p>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>

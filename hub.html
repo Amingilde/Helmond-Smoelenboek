@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoelenboek</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Algemene opmaak voor de pagina */
+        body {
+            background-color: #f0f0f5;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #343a40;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        /* Styling voor de hoofdcontent */
+        .content {
+            text-align: center;
+            margin-top: 100px; /* Ruimte voor de vaste header */
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Centraal uitlijnen */
+            flex-wrap: wrap;
+        }
+
+        /* Klikbare profielcontainer styling */
+        .profile-link {
+            text-decoration: none;
+            color: inherit; /* Zorg dat de tekstkleur behouden blijft */
+            flex: 0 1 250px; /* Containers are beside each other with fixed width */
+        }
+
+        .profile-info {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 250px;
+            margin: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover-effect */
+        .profile-info:hover {
+            transform: translateY(-10px); /* Tilt de container iets omhoog bij hover */
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Grotere schaduw bij hover */
+        }
+
+        .profile-info img {
+            width: 100px; /* Grootte van de profielfoto */
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .profile-info h2 {
+            font-size: 1.2em;
+            color: #333;
+            margin: 5px 0;
+        }
+
+        .profile-info p {
+            font-size: 1em;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Media query voor mobiel */
+        @media (max-width: 768px) {
+            header, footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            h1 {
+                margin-bottom: 10px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .profile-link {
+                width: 90%;
+            }
+        }
+    </style>
+</head> 
+<body>
+
+    <header>
+        <h1>Smoelenboek</h1>
+    </header>
+
+    <main class="content">
+        <!-- Klikbare profielcontainers -->
+        <a href="file:///C:/School%20map/SmoelenBoek/Smoelenboek/smoelenboek%20geheel/test2.html" class="profile-link">
+            <div class="profile-info">
+                <img src="foto/IMG_7276.jpeg" alt="Profiel foto 1">
+                <h2>Amin Sabi</h2>
+                <p>Leeftijd: 19</p>
+                <p>Functie: SD</p>
+                <p>Locatie: Roermond, Nederland</p>
+            </div>
+        </a>
+
+        <a href="file:///C:/School%20map/SmoelenBoek/Smoelenboek/smoelenboek%20geheel/jevanni.html" class="profile-link">
+            <div class="profile-info">
+                <img src="foto/thumbnail_jo.png" alt="Profiel foto 2">
+                <h2>Jevanni Bakkes</h2>
+                <p>Leeftijd: 16</p>
+                <p>Functie: ITSD</p>
+                <p>Locatie:Roermond, Nederland </p>
+            </div>
+        </a>
+
+        <a href="file:///C:/School%20map/SmoelenBoek/Smoelenboek/smoelenboek%20geheel/collinalgmeen.html" class="profile-link">
+            <div class="profile-info">
+                <img src="foto/foto persoon (Colin).jpg" alt="Profiel foto 3">
+                <h2>Colin Stepprath</h2>
+                <p>Leeftijd: 16</p>
+                <p>Functie: SD</p>
+                <p>Locatie: Roermond, Nederland</p>
+            </div>
+        </a>
+
+        <a href="file:///C:/School%20map/SmoelenBoek/Smoelenboek/smoelenboek%20geheel/index.html" class="profile-link">
+            <div class="profile-info">
+                <img src="foto/persoon.jpg" alt="Profiel foto 4">
+                <h2>Dillan Sampers</h2>
+                <p>Leeftijd: 18</p>
+                <p>Functie: ITSD</p>
+                <p>Locatie: Melick, Nederland</p>
+            </div>
+        </a>
+
+        
+    </main>
+
+    <footer>
+       
+    </footer>
+
+</body>
+</html>
+
