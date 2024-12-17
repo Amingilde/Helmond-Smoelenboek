@@ -1,0 +1,139 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header stijl */
+header {
+    width: 100%;
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-link {
+    color: white;
+    text-decoration: none;
+    font-size: 2.5em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header-link:hover {
+    color: #e0e0e0;
+}
+
+/* Afgeronde navigatiebalk stijl */
+.nav-bar {
+    width: 100%;
+    background-color: #444;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    border-radius: 30px; /* Maakt de balk rond */
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 20px; /* Maakt de knoppen afgerond */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+/* Main content stijl */
+main.hobbies-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+}
+
+/* Hobby sectie stijl */
+.hobby {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hobby img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+/* Info sectie stijl */
+.info h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.info p {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Footer stijl */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.language-switch {
+    position: absolute;
+    right: 16px;                                         /* Zet de taalopties aan de rechterkant */
+    top: 0;
+    display: flex;
+    gap: 10px;                                           /* Ruimte tussen de NL en EN knoppen */
+  }
+
+  .language-switch a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+
+   .language-switch a:hover {
+    background-color: #111;
+}
