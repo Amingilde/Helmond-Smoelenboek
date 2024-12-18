@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Book (Smoelenboek)</title> <!-- Changed to "Face Book" -->
+    <link rel="stylesheet" href="body.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header>
+        <a href="test2.html" class="header-link">Face Book</a> 
+        <!-- Header title linking to another page -->
+    </header>
+
+    <!-- Rounded navigation bar with Hub and Hobbies buttons -->
+    <nav class="nav-bar">
+        <a href="hobbys.html">Hobbies</a> <!-- "Hobby's" translated to "Hobbies" -->
+        <a href="hub.html">Hub</a>
+        <a href="test2.html">General</a> <!-- "Algemeen" to "General" -->
+    </nav>
+
+    <main class="smoelenboek"> <!-- Main content area -->
+        <div class="persoon">
+            <img src="foto/IMG_7276.jpeg" alt="Amin"> <!-- Profile image -->
+            <div class="info">
+                <h2>Amin</h2>
+                <p><strong>Age:</strong> 20</p> <!-- "Leeftijd" to "Age" -->
+                <p><strong>Role:</strong> Software Developer</p> <!-- "Functie" to "Role" -->
+                <p><strong>Location:</strong> Roermond, Netherlands</p> <!-- "Locatie" to "Location" -->
+                <p><strong>Email:</strong> <a href="mailto:amin.sabi@student.gildeopleidingen.nl">amin.sabi@student.gildeopleidingen.nl</a></p>
+            </div>
+        </div>
+        <!-- Add more people here -->
+    </main>
+
+    <div class="language-switch"> <!-- Language switch options -->
+        <a href="test2.html">NL</a>
+        <a href="AminTest2EN.html">EN</a>
+    </div>
+
+    <footer>
+        <!-- Footer content can be added here -->
+    </footer>
+
+    <!-- JavaScript for handling comments -->
+    <script>
+        // Execute code after the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", () => {
+            const commentList = document.querySelector(".comment-list");
+            const storedComments = JSON.parse(localStorage.getItem("comments")) || [];
+            storedComments.forEach(comment => {
+                addCommentToDOM(comment.name, comment.text);
+            });
+        });
+
+        // Handle form submission to add new comments
+        document.querySelector(".comment-form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = document.querySelector("#name").value; // Get the name from the form
+            const comment = document.querySelector("#comment").value; // Get the comment from the form
+
+            const storedComments = JSON.parse(localStorage.getItem("comments")) || [];
+            storedComments.push({ name, text: comment }); // Save the new comment to localStorage
+            localStorage.setItem("comments", JSON.stringify(storedComments));
+
+            addCommentToDOM(name, comment); // Add the comment to the page
+            e.target.reset(); // Reset the form
+        });
+
+        // Function to add a comment to the DOM
+        function addCommentToDOM(name, comment) {
+            const commentList = document.querySelector(".comment-list");
+            const commentDiv = document.createElement("div");
+            commentDiv.classList.add("comment");
+            commentDiv.innerHTML = `<h3>${name}</h3><p>${comment}</p>`; // Create the comment HTML
+            commentList.appendChild(commentDiv); // Add the comment to the list
+        }
+    </script>
+</body>
+</html>
