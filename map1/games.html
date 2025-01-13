@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<title> Games </title>
+    
+<style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color:powderblue;
+            margin: 0;
+            padding: 0;
+            display: flex;                                /* Basis van de site  */
+            justify-content: center;
+            align-items: center;
+            height: 85vh;
+            background-image:url("foto/achtergrond\ Website.jpg");
+        }
+
+
+        .games {
+            background-color:rgb(255, 255, 255);
+            border-radius: 5%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);          /* Tekst kolom 'Welke games speel ik?' (links) */
+            width: 20%;
+            padding: 1%;
+            text-align: center;
+            position:absolute;
+            left:10%; 
+            top: 32%;
+    
+        }
+         
+        .fotogow {
+            background-color:rgb(255, 255, 255);
+            border-radius: 5%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);          /* GOW foto (ongeveer midden foto) */
+            width: 20%;
+            padding: 1%;
+            text-align: center;
+            position:absolute ;
+            right:30%; 
+            top: 26%;
+          
+        }
+         .fotogow img {
+            width: 92%;                                         /* afmeetingen foto Gow */
+            height: auto; 
+         }
+   
+         .fotominecraft {
+            background-color:rgb(255, 255, 255);
+            border-radius: 5%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);          /* Minecraft foto ( rechts foto) */
+            width: 20%;
+            padding: 1%;
+            text-align: center;
+            position:absolute ;
+            right:5%; 
+            top: 36%;
+          
+         }
+
+         .fotominecraft img {
+            width: 90%;                                         /* afmeetingen foto Minecraft */
+            height: auto; 
+        }
+
+         ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            display: flex;                                   /* Navagatie balk */
+            justify-content: center; 
+            position: absolute;
+            top: 0; 
+            width: 100%; 
+        }
+
+
+          li a {
+            display: block;
+            color: white;
+            text-align: center;                              /* tekst kleur in de navagatie balk */
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        } 
+
+        .language-switch {
+          position: absolute;
+          right: 16px;                                         /* Zet de taalopties aan de rechterkant */
+          top: 0;
+          display: flex;
+          gap: 10px;                                           /* Ruimte tussen de NL en EN knoppen */
+        }
+
+        .language-switch a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+         .language-switch a:hover {
+          background-color: #111;
+        }
+
+        @media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh; /* Zorgt ervoor dat de body altijd de volledige hoogte van het scherm heeft */
+        padding: 10px;
+        padding-top: 80px; /* Voeg extra ruimte toe bovenaan voor de navbalk */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* Zorgt ervoor dat de achtergrond doorloopt, zelfs bij scrollen */
+    }
+
+    ul {
+        flex-direction: row; /* Navigatiebalk wordt horizontaal */
+        width: 100%;
+        margin: 0 0 20px 0;
+        flex-wrap: wrap;
+    }
+
+    ul li {
+        margin: 5px 0;
+    }
+
+    ul li a {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    /* Verwijder position:absolute en maak secties responsief */
+    .games,
+    .fotogow,
+    .fotominecraft {
+        position: static; /* Zet positie terug naar normaal */
+        width: 80%; /* Maak secties breder op kleinere schermen */
+        margin: 10px 0; /* Ruimte tussen secties */
+        padding: 10px; /* Maak padding kleiner */
+        gap: 5%; /* Kleine ruimte tussen elementen */
+    }
+
+    /* Voeg margin-top toe om 'Heb ik Huisdieren' verder naar beneden te plaatsen */
+    .games {
+        margin-top: 60px; /* Verhoog deze waarde om de kolom verder naar beneden te verplaatsen */
+    }
+
+    .fotogow, .fotominecraft {
+        max-width: 60%; /* Breder op kleine schermen */
+        height: auto;
+        object-fit: contain;
+    }
+
+    .games h2 {
+        font-size: 18px;
+    }
+
+    .games p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    /* Zorg ervoor dat de nav bar bovenaan blijft */
+    nav {
+        position: relative; /* Zorgt ervoor dat de nav bovenaan blijft */
+        z-index: 10; /* Zorgt ervoor dat de nav boven andere elementen komt */
+    }
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="games"> 
+    <h2> Welke games speel ik? </h2>
+    <p> Ik speel een paar games 2 van die games zijn <strong>Minecraft</strong> en <strong>Gow</strong> </p>
+    <p> <strong>Gow:</strong> staat ook wel bekend als <br> God Of War. De eerste game kwam uit in 2018 en de tweede game kwam uit in 2022 </p>
+    <p> <strong>Mincecraft:</strong> is uit gekomen op 18 november 2011. Tot de dag van vandaag is de game nog steeds net 
+                zo populeer als toen het vroeger was. </p>
+   
+   </div>
+   
+   <div class="fotogow"> 
+       <h2> Dit is God Of War </h2>
+       <img src="foto/Gow Foto 2.avif" alt="Foto GOW">  
+   
+   </div>
+       
+   <div class="fotominecraft"> 
+       <h2> Dit is Minecraft</h2>
+       <img src="foto/foto minecrfat 2.jpg" alt="foto Minecraft">
+    
+   </div>
+ 
+ 
+<ul>
+    <li><a class="active" href="hub.html">Hub</a></li>
+    <li><a href="collinalgmeen.html">Algemeen</a></li>
+    <li><a href="huisdier.html">Huisdier</a></li>
+    <li> <a href="games.html"> Games </a> </li>
+    <li> <a href="ColinReacties.html"> Reactie </a> </li>
+    <li> <a href="games.html">NL</a> </li>
+    <li> <a href="GamesEN.html">EN</a> </li>
+</ul>
+
+
+
+</body>
+</html>

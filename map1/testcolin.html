@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reactie</title>
+    <link rel="stylesheet" href="styleDillan.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+            <li><a class="active" href="hub.html">Hub</a></li>
+            <li><a href="collinalgmeen.html">Algemeen</a></li>
+            <li><a href="huisdier.html">Huisdier</a></li>
+            <li> <a href="games.html"> Games </a> </li>
+            <li> <a href="hub.html"> Reactie </a> </li>
+            <li> <a href="collinalgmeen.html">NL</a> </li>
+            <li> <a href="ColinAlgemeenEN.html">EN</a> </li>
+    </ul>
+      </nav>
+    </header>
+
+    <form id="comment-form" action="save_comment.php" method="POST">
+      <textarea
+        id="comment-input"
+        name="comment"
+        rows="4"
+        placeholder="Write your comment here..."
+        required
+      ></textarea>
+      <input
+        id="name-input"
+        name="name"
+        type="text"
+        placeholder="Write your name here..."
+        required
+      />
+      <input
+        id="email-input"
+        name="email"
+        type="email"
+        placeholder="Write your email here..."
+        required
+      />
+      <button type="submit">Submit</button>
+    </form>
+
+
+      <div id="comments-section">
+        <h3>Comments:</h3>
+        <ul id="comments-list"></ul>
+      </div>
+    </section>
+
+    <script src="comments.js"></script>
+  </body>
+</html>
